@@ -13,7 +13,7 @@
             "minLength": 1
         },
         "FunctionAppName": {
-            "defaultValue": "vmrayenrich",
+            "defaultValue": "vmrayPlatform",
             "type": "string"
         },
         "AppInsightsWorkspaceResourceID": {
@@ -149,7 +149,7 @@
                         "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=', toLower(variables('FunctionName')),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', toLower(variables('FunctionName'))), '2023-04-01').keys[0].value, ';EndpointSuffix=',toLower(variables('StorageSuffix')))]",
                         "vmrayBaseURL": "[parameters('vmrayBaseURL')]",
                         "vmrayAPIKey": "[parameters('vmrayAPIKey')]",
-                        "WEBSITE_RUN_FROM_PACKAGE": "https://github.com/shubhamloginsoft/VMRay-Platform/raw/refs/heads/main/VMRayFunctionApp.zip?raw=true"
+                        "WEBSITE_RUN_FROM_PACKAGE": "https://github.com/shubhamloginsoft/VMRay-Platform/raw/refs/heads/main/VMRayEnrichemntFuncApp.zip?raw=true"
                     }
                 }
             ]
